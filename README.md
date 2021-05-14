@@ -2,8 +2,8 @@
 
 Responsible for receive incidents from statuzpage-agent, and return informations about urls to statuzpage-ui.
 
-Configurations:
-===============
+## Configurations:
+
 Default config dir: /etc/statuzpage-api/config.json
 * mysql-host: ip/dns
 * mysql-user: mysql user
@@ -12,10 +12,8 @@ Default config dir: /etc/statuzpage-api/config.json
 * token: anyvalue "secret"
 * hostport: ip:8000 to bind
 
-Build:
-======
+## Build:
 $ go build
 
-Start
-=====
+## Start
 $ ./statuzpage-api
