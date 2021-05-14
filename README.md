@@ -1,24 +1,21 @@
-# Statuzpage API
+# StatuZpage API
 
-Requirements:
-=============
-	go get github.com/go-sql-driver/mysql
-	go get github.com/gorilla/mux
+Responsible for receive incidents from statuzpage-agent, and return informations about urls to statuzpage-ui.
 
 Configurations:
 ===============
-Change informations of config.json and copy to /etc/statuzpage-api/config.json
+Default config dir: /etc/statuzpage-api/config.json
+* mysql-host: ip/dns
+* mysql-user: mysql user
+* mysql-password: mysql password
+* mysql-db: statuzpage(default)
+* token: anyvalue "secret"
+* hostport: ip:port to bind
 
-Obs:. Token value is used on statuzpage-token header in all actions!
+Build:
+======
+$ go build
 
-Run with container:
-===================
-	docker build -t statuzpage-api:latest .
-	docker run -d -p 8000:8000 statuzpage-api:latest
-	OR
-	docker run -d -p 8000:8000 -v /localDir/config.json:/etc/statuzpage-api/config.json nopp/statuzpage-api:latest
-	
-Run without container:
-======================
-	go build -o statuzpage-api .
-	./statuzpage-api
+Start
+=====
+$ ./statuzpage-api
