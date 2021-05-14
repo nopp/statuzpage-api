@@ -18,3 +18,6 @@ $ go build
 
 ## Start
 $ ./statuzpage-api
+
+## Kubernetes Image
+noppp/statuzpage-api:tagname
