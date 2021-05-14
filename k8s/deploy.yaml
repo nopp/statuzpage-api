@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: statuzpage-api
+  namespace: statuzpage
   labels:
     app: statuzpage-api
 spec:
@@ -9,7 +10,10 @@ spec:
     matchLabels:
       app: statuzpage-api
   strategy:
-    type: Recreate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
       labels:

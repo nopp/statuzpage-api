@@ -12,7 +12,6 @@ Default config dir: /etc/statuzpage-api/config.json
 * mysql-password: mysql password
 * mysql-db: statuzpage(default)
 * token: anyvalue "secret"
-* hostport: ip:8000 to bind
 
 ## Build:
 $ go build

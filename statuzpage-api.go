@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"statuzpage-api/common"
 	"statuzpage-api/incidents"
 	"statuzpage-api/urls"
 
@@ -25,6 +24,5 @@ func main() {
 	router.HandleFunc("/incidents", incidents.GetIncidents).Methods("GET")
 	router.HandleFunc("/incidentsclosed", incidents.GetIncidentsClosed).Methods("GET")
 
-	config := common.LoadConfiguration()
-	log.Fatal(http.ListenAndServe(config.HostPort, router))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8000", router))
 }

@@ -12,10 +12,10 @@ import (
 )
 
 type config struct {
-	Host     string `json:"host"`
-	User     string `json:"user"`
-	Pass     string `json:"password"`
-	Db       string `json:"db"`
+	Host     string `json:"mysql-host"`
+	User     string `json:"mysql-user"`
+	Pass     string `json:"mysql-password"`
+	Db       string `json:"mysql-db"`
 	Token    string `json:"token"`
 	HostPort string `json:"hostport"`
 }

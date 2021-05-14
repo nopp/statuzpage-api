@@ -1,8 +1,7 @@
 {
-    "host":"xmysqlhostx",
-    "user":"xmysqluserx",
-    "password":"xmysqlpassx",
-    "db":"statuzpage",
-    "token":"xapitokenx",
-    "hostport":"0.0.0.0:8000"
+  "mysql-host":"xmysqlhostx",
+  "mysql-user":"xmysqluserx",
+  "mysql-password":"xmysqlpassx",
+  "mysql-db":"statuzpage",
+  "token":"xapitokenx"
 }
