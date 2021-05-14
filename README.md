@@ -19,5 +19,5 @@ $ go build
 ## Start
 $ ./statuzpage-api
 
-## Kubernetes Image
-noppp/statuzpage-api:tagname
+## Docker Hub Image
+https://hub.docker.com/r/noppp/statuzpage-api
