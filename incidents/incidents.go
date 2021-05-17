@@ -166,7 +166,7 @@ func GetIncidentsClosed(w http.ResponseWriter, r *http.Request) {
 		if errDB != nil {
 			common.Message(w, "Cant connect to server host!")
 		}
-		rows, err := db.Query("SELECT i.startedat,i.finishedat,i.message,u.name from sp_incidents i, sp_urls u WHERE i.idUrl = u.id AND i.finishedat IS NOT NULL ORDER by i.finishedat DESC")
+		rows, err := db.Query("SELECT i.startedat,i.finishedat,i.message,u.name from sp_incidents i, sp_urls u WHERE i.idUrl = u.id AND i.finishedat IS NOT NULL ORDER by i.finishedat DESC LIMIT 10")
 		if err != nil {
 			common.Message(w, "Cant get incidents closed from systems!")
 		}
