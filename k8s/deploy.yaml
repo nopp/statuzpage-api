@@ -28,7 +28,7 @@ spec:
           name: statuzpage-api
         volumeMounts:
         - name: config-volume
-          mountPath: /etc/statuzpage-api/config.json
+          mountPath: ./config.json
           subPath: config.json
       volumes:
         - name: config-volume
